@@ -1,0 +1,387 @@
+html, body {
+    font-family: "微软雅黑","Times New Roman", Georgia, Serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-size: 1rem;
+    overflow-y:auto;
+    background-image: url("../img/bg.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration:none;
+    cursor: pointer;
+}
+table{
+    width: 100%;
+    border: 0;
+    text-align: center;
+    border-right:1px solid #aaa;border-bottom:1px solid #aaa
+}
+table thead tr{
+    font-weight: bolder;
+    line-height: 2rem;
+}
+table tbody tr{
+    line-height: 2rem;
+    font-size: 0.9rem;
+}
+table tr td{
+    border-left:1px solid #aaa;border-top:1px solid #aaa;line-height: 2rem;
+}
+table tr td span{
+    display: inline-block;line-height: 100%;
+    max-width: 20rem; white-space: nowrap;overflow: hidden;
+}
+table tr td img{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-top: 0.7rem;
+}
+table tbody tr:nth-child(odd){
+    background: #CC9900;
+}
+table tbody tr:nth-child(even){
+    background: #CCCC00;
+}
+table tbody tr:hover{
+    background: #CC6600;
+}
+table tbody .click{
+    background-color: #00CCFF !important;
+    color: #fff;
+}
+
+input{
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+select{
+    line-height: 1.6rem;
+    height: 1.6rem;
+    font-size: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 0.3rem;
+    line-height: 1.5rem;
+    text-align: center;
+    text-decoration:none;
+    background-color: #337ab7;
+    border: 1px solid #2e6da4;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 0.9rem;
+    width: 5rem;
+}
+
+.btn:active{
+    background-color: #2e6da4;
+}
+
+.btn-info{
+    background-color: #fff;
+    color: #337ab7;
+    border-color: #337ab7;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.btn-info:active{
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.btn-success{
+    background-color: #fff;
+    color: #5cb85c;
+    border-color: #5cb85c;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.btn-success:active{
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.btn-danger{
+    background-color: #fff;
+    color: #d9534f;
+    border-color: #d9534f;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.btn-danger:active{
+    background-color: #d9534f;
+    color: #fff;
+}
+
+.top{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    height: 5rem;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.top>.title{
+    display: inline-block;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.top>.user{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.tree-menu{
+    position: fixed;
+    top:7rem;
+    width: 10rem;
+}
+.tree-menu>.tree-trunk{
+    min-height: 30rem;width: 0.5rem;
+    background: -webkit-linear-gradient(to right,#fff, #A46F4F);
+    background: -o-linear-gradient(to right,#fff, #A46F4F);
+    background: -moz-linear-gradient(to right,#fff, #A46F4F);
+    background: linear-gradient(to right,#fff, #A46F4F);
+    border-radius: 0.5rem;
+    margin-left: 4.5rem;
+}
+.tree-menu>.tree-body{
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+.tree-menu>.tree-body>.tree-leaf{
+    width: 6rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 2px solid #A46F4F;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+.tree-menu>.tree-body>.tree-leaf:nth-child(odd){
+    -webkit-transform:rotateZ(10deg);
+    -ms-transform:rotateZ(10deg);
+    transform:rotateZ(10deg);
+    background: -webkit-linear-gradient(to right,#fff, #A46F4F);
+    background: -o-linear-gradient(to right,#fff, #A46F4F);
+    background: -moz-linear-gradient(to right,#fff, #A46F4F);
+    background: linear-gradient(to right,#fff, #A46F4F);
+}
+.tree-menu>.tree-body>.tree-leaf:nth-child(even){
+    -webkit-transform:rotateZ(350deg);
+    -ms-transform:rotateZ(350deg);
+    transform:rotateZ(350deg);
+    background: -webkit-linear-gradient(to left,#fff, #A46F4F);
+    background: -o-linear-gradient(to left,#fff, #A46F4F);
+    background: -moz-linear-gradient(to left,#fff, #A46F4F);
+    background: linear-gradient(to left,#fff, #A46F4F);
+}
+.tree-menu>.tree-body>.active{
+    -webkit-transform:rotateZ(0deg)!important;
+    -ms-transform:rotateZ(0deg)!important;
+    transform:rotateZ(0deg)!important;
+    background: #CC6600!important;
+}
+.tree-menu>.tree-body>.tree-leaf:nth-child(odd):hover{
+    /*background-color: #333;*/
+    animation:menu1 1s;
+    -moz-animation:menu1 1s;
+    -webkit-animation:menu1 1s;
+    -o-animation:menu1 1s;
+}
+.tree-menu>.tree-body>.tree-leaf:nth-child(even):hover{
+    /*background-color: #333;*/
+    animation:menu2 1s;
+    -moz-animation:menu2 1s;
+    -webkit-animation:menu2 1s;
+    -o-animation:menu2 1s;
+}
+@keyframes menu1
+{
+    from {
+        -webkit-transform:rotateZ(10deg);
+        -ms-transform:rotateZ(10deg);
+        transform:rotateZ(10deg);
+    }
+    to {  -webkit-transform:rotateZ(0deg);
+        -ms-transform:rotateZ(0deg);
+        transform:rotateZ(0deg);
+    }
+}
+
+@-moz-keyframes menu1
+{
+    from {
+        -webkit-transform:rotateZ(10deg);
+        -ms-transform:rotateZ(10deg);
+        transform:rotateZ(10deg);
+    }
+    to {  -webkit-transform:rotateZ(0deg);
+        -ms-transform:rotateZ(0deg);
+        transform:rotateZ(0deg);
+    }
+}
+
+@-webkit-keyframes menu1
+{
+    from {
+        -webkit-transform:rotateZ(10deg);
+        -ms-transform:rotateZ(10deg);
+        transform:rotateZ(10deg);
+    }
+    to {  -webkit-transform:rotateZ(0deg);
+        -ms-transform:rotateZ(0deg);
+        transform:rotateZ(0deg);
+    }
+}
+
+@-o-keyframes menu1
+{
+    from {
+        -webkit-transform:rotateZ(10deg);
+        -ms-transform:rotateZ(10deg);
+        transform:rotateZ(10deg);
+    }
+    to {  -webkit-transform:rotateZ(0deg);
+        -ms-transform:rotateZ(0deg);
+        transform:rotateZ(0deg);
+    }
+}
+
+
+@keyframes menu2
+{
+    from {
+        -webkit-transform:rotateZ(350deg);
+        -ms-transform:rotateZ(350deg);
+        transform:rotateZ(350deg);
+    }
+    to {  -webkit-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        transform:rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes menu2
+{
+    from {
+        -webkit-transform:rotateZ(350deg);
+        -ms-transform:rotateZ(350deg);
+        transform:rotateZ(350deg);
+    }
+    to {  -webkit-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        transform:rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes menu2
+{
+    from {
+        -webkit-transform:rotateZ(350deg);
+        -ms-transform:rotateZ(350deg);
+        transform:rotateZ(350deg);
+    }
+    to {  -webkit-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        transform:rotateZ(360deg);
+    }
+}
+
+@-o-keyframes menu2
+{
+    from {
+        -webkit-transform:rotateZ(350deg);
+        -ms-transform:rotateZ(350deg);
+        transform:rotateZ(350deg);
+    }
+    to {  -webkit-transform:rotateZ(360deg);
+        -ms-transform:rotateZ(360deg);
+        transform:rotateZ(360deg);
+    }
+}
+
+
+
+/**注册页样式*/
+.login {
+    text-align: center;
+}
+
+.login input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 2px inset #aaa;
+    outline: none;
+    padding: 0 0.5rem;
+    line-height: 1.6rem;
+    display: inline-block;
+    border-radius: 0.3rem;
+    background-color: #eee;
+    width: 8rem;
+    font-size: 0.9rem;
+}
+
+.login input:focus{
+    background-color: #ccc;
+}
+
+.login >.login-content{
+    display: inline-block;
+    background-color: #CC6600;
+    box-shadow: 0 0 5px #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 20rem;
+    margin-top: 18%;
+}
+.login>.login-content >.logo{
+    height: 10rem;
+}
+.login>.login-content >.logo>img{
+    height: 100%;
+}
+
+.login >.login-content> .box>div{
+    display: inline-block;
+}
+.login >.login-content> .box>.title{
+    display:block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #4F4E4E;
+}
+.login >.login-content> .box>.input>div{
+    margin-bottom: 1rem;
+}
+
+.login >.login-content> .box  a{
+    width: 9rem;
+}
+.login >.login-content> .box>.input>div>input,.login >.login-content> .box>.input>div>select{
+    width: 9rem;
+}
+

@@ -1,0 +1,54 @@
+.form{
+    margin: 7rem 10rem 2rem;
+    background-color: rgba(225,225,225,0.9);
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 25rem;
+}
+
+.form>div{
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+.form>div>span{
+    display: inline-block;
+    width: 4rem;
+}
+.form>div>input,.form>div>select{
+    width: calc(100% - 7rem);
+    line-height: 2rem;
+    padding: 0 0.5rem;
+}
+.form>div>select{
+    height: 2.4rem;
+}
+.form>div>a{
+    color: #337ab7;
+}
+.form>a{
+    margin-right: 2rem;
+}
+
+.form>.subject-type>.subject-title{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    line-height: 2rem;
+}
+.form>.subject-type>.subject-content>.subject-view{
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+}
+.form>.subject-type>.subject-content>.subject-view>div{
+    line-height: 1.6rem;
+}
+.form>.subject-type>.subject-content>.subject-view>div>p{
+    line-height: 1.6rem;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+.form>.subject-type>.subject-content>.subject-view>.subject-question>p{
+    display: inline-block;
+    font-weight: bolder;
+}
